@@ -2,18 +2,27 @@
     --current-color: rgb(255, 102, 46);
     --default-color: rgb(62, 62, 62);
 }
-
+.start{
+    visibility: visible;
+}
+.end{
+    visibility: hidden;
+}
+.goida{
+    color:white;
+}
 body {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 95vw;
+    height: 95vh;
     -webkit-user-drag: none;
     user-select: none;
     background: black;
 }
 
 .field-container {
+    
     width: 100%;
     height: 100%;
     display: flex;
