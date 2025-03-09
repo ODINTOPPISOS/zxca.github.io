@@ -3,7 +3,34 @@ var IS_CLICKED = false
 var CURRENT_COLOR = getComputedStyle(document.documentElement).getPropertyValue('--current-color');
 var DEFAULT_COLOR = getComputedStyle(document.documentElement).getPropertyValue('--default-color');
 var FILL_MODE = false
+var GO = true
+let goi = document.querySelector('.goida')
+let sta = document.querySelector('.start')
 
+let gaz = document.querySelector('.end')
+
+
+goi.addEventListener('click', function() {
+    if (GO == true){
+        gaz.style.visibility = 'visible' 
+        sta.style.visibility = 'hidden'
+        sta.style.width = '0px'
+        sta.style.height = '0px'
+
+        GO = false
+    }
+    else {
+        gaz.style.visibility = 'hidden' 
+        sta.style.visibility = 'visible'
+        sta.style.width = '100vw'
+        sta.style.height = '100vh'
+
+
+        console.log('qwe')
+        GO = true
+    }
+    
+})
 // Изменение флага "кнопка мыши опущена"
 document.addEventListener('mousedown', function() {
     IS_CLICKED = true;
